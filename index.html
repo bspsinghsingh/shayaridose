@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShayariDose – Best Quotes, Status & Shayari in Hindi & English</title>
+<meta name="description" content="Find the best quotes, WhatsApp status, shayari, and wishes in Hindi and English. Good morning quotes, sad shayari, motivational quotes, birthday wishes and more.">
+<meta name="keywords" content="quotes in hindi, whatsapp status, shayari, good morning quotes, motivational quotes, sad shayari, birthday wishes">
+<link rel="canonical" href="https://shayaridose.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1207;
+  --paper: #faf7f2;
+  --warm: #f5ede0;
+  --gold: #c8922a;
+  --gold-light: #e8b84b;
+  --rust: #c45e2a;
+  --muted: #7a6f62;
+  --card: #fff9f3;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+/* NAV */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 4%; border-bottom: 1px solid rgba(200,146,42,0.2); background: var(--paper); position: sticky; top: 0; z-index: 100; }
+.logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 900; color: var(--ink); text-decoration: none; }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero { text-align: center; padding: 5rem 4% 4rem; position: relative; overflow: hidden; }
+.hero::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 30rem; color: rgba(200,146,42,0.06); position: absolute; top: -8rem; left: 50%; transform: translateX(-50%); line-height: 1; pointer-events: none; }
+.hero-tag { display: inline-block; background: var(--gold); color: white; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; padding: 0.3rem 1rem; border-radius: 2rem; margin-bottom: 1.5rem; text-transform: uppercase; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; max-width: 800px; margin: 0 auto 1.5rem; }
+.hero h1 em { color: var(--gold); font-style: italic; }
+.hero p { font-size: 1.1rem; color: var(--muted); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.7; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: var(--ink); color: white; padding: 0.85rem 2rem; border-radius: 0.4rem; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: background 0.2s; }
+.btn-primary:hover { background: var(--gold); }
+.btn-secondary { border: 1.5px solid var(--ink); color: var(--ink); padding: 0.85rem 2rem; border-radius: 0.4rem; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.2s; }
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+/* STATS BAR */
+.stats { background: var(--ink); color: white; display: flex; justify-content: center; gap: 4rem; padding: 1.5rem 4%; flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light); }
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 0.2rem; }
+
+/* CATEGORIES */
+.section { padding: 4rem 4%; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+.section-sub { color: var(--muted); margin-bottom: 2.5rem; font-size: 0.95rem; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+.cat-card { background: var(--card); border: 1px solid rgba(200,146,42,0.15); border-radius: 0.8rem; padding: 1.5rem; text-decoration: none; color: var(--ink); transition: all 0.2s; display: block; }
+.cat-card:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,146,42,0.12); }
+.cat-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+.cat-name { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; }
+.cat-count { font-size: 0.82rem; color: var(--muted); }
+
+/* FEATURED QUOTES */
+.quotes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+.quote-card { background: var(--card); border-left: 3px solid var(--gold); border-radius: 0 0.8rem 0.8rem 0; padding: 1.5rem; position: relative; }
+.quote-card.hindi { border-left-color: var(--rust); }
+.quote-text { font-family: 'Playfair Display', serif; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem; }
+.quote-author { font-size: 0.82rem; color: var(--muted); font-weight: 500; }
+.quote-tag { position: absolute; top: 1rem; right: 1rem; font-size: 0.72rem; background: var(--warm); color: var(--gold); padding: 0.2rem 0.6rem; border-radius: 1rem; }
+.copy-btn { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--gold); cursor: pointer; background: none; border: none; margin-top: 0.8rem; font-family: 'DM Sans', sans-serif; }
+.copy-btn:hover { color: var(--rust); }
+
+/* TRENDING */
+.trending-list { display: flex; flex-direction: column; gap: 0.8rem; }
+.trend-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--card); border-radius: 0.6rem; border: 1px solid rgba(200,146,42,0.1); text-decoration: none; color: var(--ink); transition: all 0.2s; }
+.trend-item:hover { border-color: var(--gold); }
+.trend-num { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 900; color: rgba(200,146,42,0.25); min-width: 2rem; }
+.trend-info { flex: 1; }
+.trend-title { font-weight: 500; font-size: 0.95rem; margin-bottom: 0.2rem; }
+.trend-meta { font-size: 0.8rem; color: var(--muted); }
+.trend-arrow { color: var(--gold); font-size: 1.2rem; }
+
+/* FOOTER */
+footer { background: var(--ink); color: rgba(255,255,255,0.6); text-align: center; padding: 2.5rem 4%; font-size: 0.85rem; }
+footer a { color: var(--gold-light); text-decoration: none; }
+.footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .stats { gap: 2rem; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">Shayari<span>Dose</span></a>
+  <ul class="nav-links">
+    <li><a href="good-morning-quotes.html">Good Morning</a></li>
+    <li><a href="sad-shayari.html">Sad Shayari</a></li>
+    <li><a href="motivational-quotes.html">Motivational</a></li>
+    <li><a href="whatsapp-status.html">WhatsApp Status</a></li>
+    <li><a href="birthday-wishes.html">Birthday</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <span class="hero-tag">✨ 10,000+ Quotes & Status</span>
+  <h1>Words That <em>Touch</em> the Heart</h1>
+  <p>Find the perfect quote, shayari, or status for every mood — in Hindi and English. Copy and share in one tap.</p>
+  <div class="hero-btns">
+    <a href="good-morning-quotes.html" class="btn-primary">Good Morning Quotes</a>
+    <a href="sad-shayari.html" class="btn-secondary">Sad Shayari</a>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="stat-num">10K+</div><div class="stat-label">Quotes & Shayari</div></div>
+  <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Categories</div></div>
+  <div class="stat"><div class="stat-num">Hindi</div><div class="stat-label">& English Both</div></div>
+  <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Copy & Share</div></div>
+</div>
+
+<section class="section">
+  <h2 class="section-title">Browse by Category</h2>
+  <p class="section-sub">Pick your mood and find the perfect words</p>
+  <div class="cat-grid">
+    <a href="good-morning-quotes.html" class="cat-card">
+      <div class="cat-icon">🌅</div>
+      <div class="cat-name">Good Morning Quotes</div>
+      <div class="cat-count">500+ quotes in Hindi & English</div>
+    </a>
+    <a href="sad-shayari.html" class="cat-card">
+      <div class="cat-icon">💔</div>
+      <div class="cat-name">Sad Shayari</div>
+      <div class="cat-count">300+ 2-line shayari in Hindi</div>
+    </a>
+    <a href="motivational-quotes.html" class="cat-card">
+      <div class="cat-icon">🔥</div>
+      <div class="cat-name">Motivational Quotes</div>
+      <div class="cat-count">400+ for students & life</div>
+    </a>
+    <a href="whatsapp-status.html" class="cat-card">
+      <div class="cat-icon">💬</div>
+      <div class="cat-name">WhatsApp Status</div>
+      <div class="cat-count">600+ attitude & love status</div>
+    </a>
+    <a href="birthday-wishes.html" class="cat-card">
+      <div class="cat-icon">🎂</div>
+      <div class="cat-name">Birthday Wishes</div>
+      <div class="cat-count">200+ for friends & family</div>
+    </a>
+    <a href="love-quotes.html" class="cat-card">
+      <div class="cat-icon">❤️</div>
+      <div class="cat-name">Love Quotes</div>
+      <div class="cat-count">350+ romantic quotes</div>
+    </a>
+    <a href="attitude-status.html" class="cat-card">
+      <div class="cat-icon">😎</div>
+      <div class="cat-name">Attitude Status</div>
+      <div class="cat-count">400+ attitude boy & girl</div>
+    </a>
+    <a href="good-night-quotes.html" class="cat-card">
+      <div class="cat-icon">🌙</div>
+      <div class="cat-name">Good Night Quotes</div>
+      <div class="cat-count">250+ sweet good night wishes</div>
+    </a>
+  </div>
+</section>
+
+<section class="section" style="background: var(--warm); margin: 0;">
+  <h2 class="section-title">Featured Quotes Today</h2>
+  <p class="section-sub">Handpicked for you — copy and share instantly</p>
+  <div class="quotes-grid">
+    <div class="quote-card">
+      <span class="quote-tag">Motivational</span>
+      <p class="quote-text">"Success is not final, failure is not fatal — it is the courage to continue that counts."</p>
+      <p class="quote-author">— Winston Churchill</p>
+      <button class="copy-btn" onclick="copyText(this, 'Success is not final, failure is not fatal — it is the courage to continue that counts. — Winston Churchill')">📋 Copy</button>
+    </div>
+    <div class="quote-card hindi">
+      <span class="quote-tag">Shayari</span>
+      <p class="quote-text">"ज़िंदगी में जो भी करो, दिल से करो,<br>क्योंकि अधूरे मन से की गई कोशिश, कभी पूरी नहीं होती।"</p>
+      <p class="quote-author">— Hindi Shayari</p>
+      <button class="copy-btn" onclick="copyText(this, 'ज़िंदगी में जो भी करो, दिल से करो, क्योंकि अधूरे मन से की गई कोशिश, कभी पूरी नहीं होती।')">📋 Copy</button>
+    </div>
+    <div class="quote-card">
+      <span class="quote-tag">Good Morning</span>
+      <p class="quote-text">"Every morning you have two choices: continue to sleep with your dreams, or wake up and chase them."</p>
+      <p class="quote-author">— Unknown</p>
+      <button class="copy-btn" onclick="copyText(this, 'Every morning you have two choices: continue to sleep with your dreams, or wake up and chase them.')">📋 Copy</button>
+    </div>
+    <div class="quote-card hindi">
+      <span class="quote-tag">Attitude</span>
+      <p class="quote-text">"मेरी औकात पूछते हो? पहले अपनी हैसियत तो देखो,<br>हम वो हैं जो खुद अपनी तकदीर लिखते हैं।"</p>
+      <p class="quote-author">— Attitude Status</p>
+      <button class="copy-btn" onclick="copyText(this, 'मेरी औकात पूछते हो? पहले अपनी हैसियत तो देखो, हम वो हैं जो खुद अपनी तकदीर लिखते हैं।')">📋 Copy</button>
+    </div>
+    <div class="quote-card">
+      <span class="quote-tag">Birthday</span>
+      <p class="quote-text">"May your birthday be the start of a year filled with good luck, good health, and much happiness."</p>
+      <p class="quote-author">— Birthday Wish</p>
+      <button class="copy-btn" onclick="copyText(this, 'May your birthday be the start of a year filled with good luck, good health, and much happiness.')">📋 Copy</button>
+    </div>
+    <div class="quote-card hindi">
+      <span class="quote-tag">Sad Shayari</span>
+      <p class="quote-text">"दर्द तो सबको होता है, फर्क बस इतना है,<br>कोई छुपा लेता है, कोई बता देता है।"</p>
+      <p class="quote-author">— Sad Shayari</p>
+      <button class="copy-btn" onclick="copyText(this, 'दर्द तो सबको होता है, फर्क बस इतना है, कोई छुपा लेता है, कोई बता देता है।')">📋 Copy</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Trending Searches</h2>
+  <p class="section-sub">What people are looking for right now</p>
+  <div class="trending-list">
+    <a href="good-morning-quotes.html" class="trend-item">
+      <span class="trend-num">1</span>
+      <div class="trend-info"><div class="trend-title">Good Morning Quotes in Hindi</div><div class="trend-meta">300K+ searches/month</div></div>
+      <span class="trend-arrow">→</span>
+    </a>
+    <a href="whatsapp-status.html" class="trend-item">
+      <span class="trend-num">2</span>
+      <div class="trend-info"><div class="trend-title">WhatsApp Status Attitude Boy</div><div class="trend-meta">120K+ searches/month</div></div>
+      <span class="trend-arrow">→</span>
+    </a>
+    <a href="sad-shayari.html" class="trend-item">
+      <span class="trend-num">3</span>
+      <div class="trend-info"><div class="trend-title">Sad Shayari in Hindi 2 Lines</div><div class="trend-meta">500K+ searches/month</div></div>
+      <span class="trend-arrow">→</span>
+    </a>
+    <a href="motivational-quotes.html" class="trend-item">
+      <span class="trend-num">4</span>
+      <div class="trend-info"><div class="trend-title">Motivational Quotes for Students</div><div class="trend-meta">80K+ searches/month</div></div>
+      <span class="trend-arrow">→</span>
+    </a>
+    <a href="birthday-wishes.html" class="trend-item">
+      <span class="trend-num">5</span>
+      <div class="trend-info"><div class="trend-title">Birthday Wishes for Best Friend</div><div class="trend-meta">200K+ searches/month</div></div>
+      <span class="trend-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="good-morning-quotes.html">Good Morning</a>
+    <a href="sad-shayari.html">Sad Shayari</a>
+    <a href="motivational-quotes.html">Motivational</a>
+    <a href="whatsapp-status.html">WhatsApp Status</a>
+    <a href="birthday-wishes.html">Birthday</a>
+    <a href="love-quotes.html">Love Quotes</a>
+    <a href="attitude-status.html">Attitude</a>
+  </div>
+  <p>© 2025 ShayariDose — Best Quotes, Status & Shayari in Hindi & English</p>
+</footer>
+
+<script>
+function copyText(btn, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '✅ Copied!';
+    setTimeout(() => btn.textContent = '📋 Copy', 2000);
+  });
+}
+</script>
+</body>
+</html>
