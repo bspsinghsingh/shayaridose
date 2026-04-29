@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us – ShayariDose</title>
+<meta name="description" content="Contact ShayariDose.com - Send us your suggestions, feedback or quote submissions. We'd love to hear from you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FRWT7CN79S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FRWT7CN79S');</script>
+<style>
+:root{--ink:#1a1207;--paper:#faf7f2;--warm:#f5ede0;--gold:#c8922a;--gold-light:#e8b84b;--muted:#7a6f62;--card:#fff9f3;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 4%;border-bottom:1px solid rgba(200,146,42,0.2);background:var(--paper);}
+.logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--ink);text-decoration:none;}.logo span{color:var(--gold);}
+.nav-back{color:var(--muted);text-decoration:none;font-size:0.9rem;}
+.hero{background:linear-gradient(135deg,#fff8ee,#fdf0e0);padding:3.5rem 4%;text-align:center;}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;margin-bottom:1rem;}
+.hero p{color:var(--muted);max-width:500px;margin:0 auto;}
+.container{max-width:700px;margin:0 auto;padding:3rem 4%;}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem;}
+.contact-card{background:var(--card);border:1px solid rgba(200,146,42,0.15);border-radius:0.8rem;padding:1.5rem;text-align:center;}
+.contact-icon{font-size:2rem;margin-bottom:0.8rem;}
+.contact-title{font-weight:500;margin-bottom:0.4rem;}
+.contact-val{font-size:0.9rem;color:var(--muted);}
+.form-group{margin-bottom:1.2rem;}
+label{display:block;font-size:0.88rem;font-weight:500;margin-bottom:0.4rem;color:var(--ink);}
+input,textarea,select{width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,42,0.25);border-radius:0.5rem;font-family:'DM Sans',sans-serif;font-size:0.95rem;background:var(--card);color:var(--ink);outline:none;transition:border-color 0.2s;}
+input:focus,textarea:focus{border-color:var(--gold);}
+textarea{height:140px;resize:vertical;}
+.submit-btn{background:var(--ink);color:white;border:none;padding:0.9rem 2.5rem;border-radius:0.5rem;font-size:1rem;font-family:'DM Sans',sans-serif;font-weight:500;cursor:pointer;transition:background 0.2s;width:100%;}
+.submit-btn:hover{background:var(--gold);}
+.success{display:none;background:#EAF3DE;color:#3B6D11;padding:1rem;border-radius:0.5rem;text-align:center;margin-top:1rem;font-weight:500;}
+h2{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:1.5rem;}
+footer{background:var(--ink);color:rgba(255,255,255,0.6);text-align:center;padding:2rem 4%;font-size:0.85rem;margin-top:3rem;}
+footer a{color:#e8b84b;text-decoration:none;}
+</style>
+</head>
+<body>
+<nav><a href="index.html" class="logo">Shayari<span>Dose</span></a><a href="index.html" class="nav-back">← Back to Home</a></nav>
+<div class="hero">
+  <h1>Contact Us 💌</h1>
+  <p>Have a suggestion, want to submit a quote, or found an error? We'd love to hear from you.</p>
+</div>
+<div class="container">
+  <div class="contact-grid">
+    <div class="contact-card"><div class="contact-icon">📧</div><div class="contact-title">Email Us</div><div class="contact-val">contact@shayaridose.com</div></div>
+    <div class="contact-card"><div class="contact-icon">⏱️</div><div class="contact-title">Response Time</div><div class="contact-val">Within 24–48 hours</div></div>
+    <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-title">Based In</div><div class="contact-val">New Delhi, India</div></div>
+  </div>
+
+  <h2>Send Us a Message</h2>
+  <div class="form-group"><label for="name">Your Name</label><input type="text" id="name" placeholder="Enter your name"></div>
+  <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" placeholder="Enter your email"></div>
+  <div class="form-group"><label for="subject">Subject</label>
+    <select id="subject">
+      <option value="">Select a subject</option>
+      <option>Submit a Quote or Shayari</option>
+      <option>Report an Error</option>
+      <option>Suggest a New Category</option>
+      <option>Business / Advertising Inquiry</option>
+      <option>General Feedback</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Write your message here..."></textarea></div>
+  <button class="submit-btn" onclick="submitForm()">Send Message ✉️</button>
+  <div class="success" id="success">✅ Thank you! Your message has been received. We'll get back to you within 24–48 hours.</div>
+</div>
+<footer><p>© 2025 <a href="index.html">ShayariDose</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="about.html">About Us</a> · <a href="contact.html">Contact</a></p></footer>
+<script>
+function submitForm(){
+  const name=document.getElementById('name').value;
+  const email=document.getElementById('email').value;
+  const message=document.getElementById('message').value;
+  if(!name||!email||!message){alert('Please fill in all required fields.');return;}
+  document.getElementById('success').style.display='block';
+  document.getElementById('name').value='';
+  document.getElementById('email').value='';
+  document.getElementById('message').value='';
+}
+</script>
+</body>
+</html>

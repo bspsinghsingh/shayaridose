@@ -83,7 +83,10 @@ footer a{color:var(--gold-light);text-decoration:none;}
     <p>From short 2-line motivational quotes in Hindi to long inspirational messages in English, we have something for everyone. Perfect for WhatsApp status, Instagram bio, or your study table wall.</p>
   </div>
 </div>
-<footer><p>© 2025 <a href="index.html">ShayariDose</a> — Motivational Quotes in Hindi & English</p></footer>
+<footer>
+<p><a href="index.html">Home</a> · <a href="about.html">About Us</a> · <a href="privacy-policy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></p>
+<p style="margin-top:0.5rem;">© 2025 ShayariDose.com — Best Quotes, Shayari & Status in Hindi & English</p>
+</footer>
 <script>
 function copy(btn,text){navigator.clipboard.writeText(text).then(()=>{btn.textContent='✅ Copied!';setTimeout(()=>btn.textContent='📋 Copy',2000);});}
 function filterQuotes(cat,btn){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.qcard').forEach(c=>{c.style.display=(cat==='all'||c.dataset.cat.includes(cat))?'block':'none';});}
